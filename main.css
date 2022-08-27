@@ -79,3 +79,17 @@ footer {
   background-color: #B1D7B4;
   padding: 10px;
 }
+
+.extra-chars {
+  margin-top: 10px;
+}
+
+.extra-chars span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.extra-chars input {
+  padding: 5px;
+  width: 100%;
+}

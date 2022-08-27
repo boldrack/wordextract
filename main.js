@@ -20,12 +20,15 @@ const extractWords = (content) => {
 const replaceTokens = (content) => {
   // this tokens is surely going to be more work than this 
   let rContent = content.replaceAll('?', ' ')
-  const replacementPattern = /[\(\)\[\]""''\.,:-]/ig
+  const replacementPattern = /[\(\)\[\]""''\.,:-;\/=!]/ig
   rContent = rContent.replace(/\r\n|\r|\n/g, ' ');
   console.log('AFter first replacement : ', rContent)
   rContent = rContent.replace(replacementPattern, ' ');
   console.log('AFter second replacement : ', rContent)
-  rContent = rContent.replaceAll('¿', ' ')
+  rContent = rContent.replaceAll('¿', ' ');
+  rContent = document.querySelector('.extra-chars-input').value
+    .split(',')
+    .reduce((acc, curr) => acc.replaceAll(curr, ' '), rContent)
   return rContent;
 }
 
