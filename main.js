@@ -26,9 +26,9 @@ const replaceTokens = (content) => {
   rContent = rContent.replace(replacementPattern, ' ');
   console.log('AFter second replacement : ', rContent)
   rContent = rContent.replaceAll('¿', ' ');
-  const delims = document.querySelector('.extra-chars-input').value
+  const delims = document.querySelector('.extra-chars-input').value.split(',').filter(v => v.length > 0)
   if(delims.length > 0)
-    rContent = delims.split(',').reduce((acc, curr) => acc.replaceAll(curr, ' '), rContent)
+    rContent = delims.reduce((acc, curr) => acc.replaceAll(curr, ' '), rContent)
   return rContent;
 }
 
