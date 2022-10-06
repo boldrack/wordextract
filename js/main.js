@@ -1,5 +1,3 @@
-const sampleText = `he  llo, world. he said:- name is "boldman". I'm yomi world`;
-
 const extractWords = (content) => {
   const bareContent = content.replace('\n', '');
   // replace some specified tokens 
