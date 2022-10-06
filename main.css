@@ -6,24 +6,20 @@
 
 body {
   min-height: 100vh;
-  /*background-color: #eeeeee;*/
-  font-family: Verdana sans-serif;
+  font-family: Verdana, sans-serif;
+  background-color: #000000;
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 20px;
   padding: 20px;
-  background-color: #EEE;
 }
 
 .input-container,
 .output-container {
-  /*border: 2px solid red;*/
   width: 100%;
-  height: 90vh;
 }
 
 .input-container {
@@ -34,13 +30,13 @@ body {
 
 .input-container textarea,
 .output-container textarea {
-  height: 80%;
+  height: 30%;
   width: 100%;
   font-size: 24px;
 }
 
 .btn {
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   margin-top: 20px;
   font-size: 20px;
@@ -50,34 +46,38 @@ body {
 }
 
 .btn.extract {
-  background-color: #7FB77E;
+  background-color: #ccac00;
   color: #FFFFFF;
 }
 
 .btn.copy {
-  background-color: #FFC090;
+  background-color: #ccac00;
   color: #FFFFFF;
 }
 
 header {
-  background-color: #B1D7B4;
-  padding: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: #222222;
+
 }
 
-header p {
+header h2 {
+  color: #ccac00;
   font-size: 24px;
-  letter-spacing: 2p;x
+  letter-spacing: 2px;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  align-content: center;
-  color:  #000000;
+  align-items: center;
+  color:  #FFD700;
   width: 100%;
-  height: 70px;
-  background-color: #B1D7B4;
-  padding: 10px;
+  height: 200px;
+  padding: 2rem;
+  background: #222222;
+  margin-top: 2rem;
 }
 
 .extra-chars {
@@ -85,6 +85,7 @@ footer {
 }
 
 .extra-chars span {
+  color:  #ccac00;
   display: block;
   margin-bottom: 10px;
 }
@@ -92,8 +93,16 @@ footer {
 .extra-chars input {
   padding: 5px;
   width: 100%;
+  max-width: 500px;
 }
+
 .fast-forward {
-  width: 50px; height: 50px;
-  transform: translateY(-90px);
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.fast-forward img {
+  width: 50px;
+  height: 50px;
 }

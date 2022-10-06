@@ -20,12 +20,19 @@ const extractWords = (content) => {
 const replaceTokens = (content) => {
   // this tokens is surely going to be more work than this 
   let rContent = content.replaceAll('?', ' ')
-  const replacementPattern = /[\(\)\[\]""''\.,:-;\/=!]/ig
+  const replacementPattern = /[\(\)\[\]""''\▼.,-1234567890*&%“:#<>@~£$-;\—/=!]/ig
+  // Added ▼ 1234567890 — !"£$%^&*()_+=-[]{};'#:@~,./<>?
   rContent = rContent.replace(/\r\n|\r|\n/g, ' ');
   console.log('AFter first replacement : ', rContent)
   rContent = rContent.replace(replacementPattern, ' ');
   console.log('AFter second replacement : ', rContent)
   rContent = rContent.replaceAll('¿', ' ');
+  rContent = rContent.replaceAll('✕', ' ');
+  rContent = rContent.replaceAll('”', ' ');
+  rContent = rContent.replaceAll('_', ' '); 
+  rContent = rContent.replaceAll('{', ' '); 
+  rContent = rContent.replaceAll('}', ' '); 
+  rContent = rContent.replaceAll('+', ' '); //This line is not working. Could not find a result to remove + from text.
   const delims = document.querySelector('.extra-chars-input').value.split(',').filter(v => v.length > 0)
   if(delims.length > 0)
     rContent = delims.reduce((acc, curr) => acc.replaceAll(curr, ' '), rContent)
