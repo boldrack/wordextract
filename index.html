@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Localise It - Vocabulary Builder</title>
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" type="text/css" href="/css/toastify.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordEx - Vocabulary Builder</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/toastify.min.css" />
+  </head>
+  <body>
+    <header>
+      <h2>WordEx - Vocabulary Builder</h2>
+    </header>
 
-</head>
-<body>
-  <header>
-    <h2>Localise It - Vocabulary Builder</h2>
-	</header>
-  
-  <div class="container">
-    <div class="input-container">
-      <textarea class="input" name="" id="" cols="20" rows="5"></textarea>
-      <div class="extra-chars">
-        <span>(Optional) Enter additional characters here to remove them from the results. Separate by comma.</span>
-        <input type="text" class="extra-chars-input" placeholder="Enter characters e.g   /,  <,  @,  $">
+    <div class="container">
+      <div class="input-container">
+        <textarea class="input" name="" id="" cols="20" rows="5"></textarea>
+        <div class="extra-chars">
+          <span
+            >(Optional) Enter additional characters here to remove them from the
+            results. Separated by comma.</span
+          >
+          <input
+            type="text"
+            class="extra-chars-input"
+            placeholder="Enter characters e.g   /,  <,  @,  $"
+          />
+        </div>
+        <button class="btn extract">Extract Words</button>
       </div>
-      <button class="btn extract">Spark My Vocabulary</button>
+
+      <!-- <div class="fast-forward">
+        <img class="" src="images/fast-forward-down.png" />
+      </div> -->
+
+      <div class="output-container">
+        <textarea class="output" name="" id="" cols="20" rows="5"></textarea>
+        <button class="btn copy">Copy Words</button>
+      </div>
     </div>
 
-		<div class="fast-forward">	
-			<img class="" src="images/fast-forward-down.png"/>
-		</div>
-
-    <div class="output-container">
-      <textarea class="output" name="" id="" cols="20" rows="5"></textarea>
-      <button class="btn copy">Copy</button>
-    </div>
-
-  </div>
-
-  <footer>copyright 2022 @ Phillippe</footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <script type="text/javascript" src="/js/main.js"></script>
-</body>
+    <footer>copyright 2022 @ Boldrack</footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
 </html>
